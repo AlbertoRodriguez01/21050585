@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fondo {
+    background-image: image("image.png");
+}
+
+.content {
+    min-height: 80px;
+    background: linear-gradient(90deg,
+            rgba(203, 18, 133, 1)0%,
+            rgba(80, 49, 145, 1)70%);
+}
+
+
+
+p.texto1 {
+    text-align: justify;
+    font-family: Arial;
+    font-size: 150%;
+    color: white;
+    background-color: black;
+    height: auto;
+    width: 800px;
+    border: BLUE 5px solid;
+    padding: 2%;
+}
+
+.texto2 {
+    margin-top: 2%;
+    padding: 1%;
+    background-color: white;
+    height: auto;
+    width: 800px;
+    margin-left: 22%;
+    border: black 5px solid;
+    margin-bottom: 2%;
+}
+
+.texto2 p{
+    padding: 5px;
+}
+
+.subtitulos {
+ font-size: 32px;
+ margin-bottom: 2%;
+}
+
+.temario1 {
+    margin-top: 3%;
+    background-color: white;
+    height: auto;
+    width: 400px;
+    border: black 10px solid;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 2%;
+}
+
+.temario1 p{
+    padding: 5px;
+}
+
+
+
+.menu {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #dedede;
+    display: block;
+    font-weight: bold;
+}
+
+.menu .navbar ul li a:hover {
+    color: #ffffff;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width:991px) {
+    .content {
+        min-height: 70px;
+    }
+
+    .menu {
+        top: 0;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(90deg,
+                rgba(203, 18, 133, 1)0%,
+                rgba(80, 49, 145, 1)70%);
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked~.navbar {
+        display: initial;
+    }
+}
